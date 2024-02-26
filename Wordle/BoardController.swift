@@ -36,6 +36,7 @@ class BoardController: NSObject,
   func enter(_ string: String) {
     guard numGuesses < numItemsPerRow * numRows else { return }
     let cell = collectionView.cellForItem(at: IndexPath(item: numGuesses, section: 0)) as! LetterCell
+      
     cell.set(letter: string)
     UIView.animate(withDuration: 0.1,
                    delay: 0.0,
@@ -50,11 +51,15 @@ class BoardController: NSObject,
     }, completion: { finished in
       cell.transform = CGAffineTransformIdentity
     })
+      
     if isFinalGuessInRow() {
       markLettersInRow()
     }
+            
     numGuesses += 1
   }
+    
+    
 
   func deleteLastCharacter() {
     guard numGuesses > 0 && numGuesses % numItemsPerRow != 0 else { return }

@@ -8,3 +8,4 @@
 import Foundation
 
 let DELETE_KEY = "DEL"
+let ENTER_KEY = "ETR"
