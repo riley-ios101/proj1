@@ -23,8 +23,9 @@ The following **optional** features are implemented:
 
 The following **additional** features are implemented:
 
+- [x] Have an enter key
+- [ ] When the enter key is pressed, the guess is registered instead of having `if letter is last in row`
 - [ ] Have `numGuesses` displayed somewhere on the screen
-- [ ] When the correct guess is made, have the cell rotate and have some effects
 
 ## Video Walkthrough
 
